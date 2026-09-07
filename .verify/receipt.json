@@ -3,38 +3,36 @@
   "repo": "iridex-ai/iridex-ai",
   "visibility": "PUBLIC",
   "visibility_assumed": false,
-  "head": "4d5cff4cb331f5519647f4352108162b23f2b357",
-  "content_id": "89bc7e60a2892313e3014866d3eb1ba60c2dbd9debbae302a64a3f3eebc1c8b6",
+  "head": "41686c5b494c5cf4fe4038dca5eb3eb7d8ea9a84",
+  "content_id": "212502d38a861c33968c4850512a980a16be0cbc1fc09876840691a8a4e4f080",
   "branch": "ci/dependabot-policy",
-  "verified_at": "2026-09-07T19:48:26.0222542-04:00",
+  "verified_at": "2026-09-07T19:50:38.8962024-04:00",
   "ran_on": "windows-26100.9168",
   "stages": {
     "works": {
-      "proved_on": "windows-26100.9168",
       "timed_out": false,
-      "status": "pass",
       "exit": 0,
+      "proved_on": "windows-26100.9168",
+      "cmd": "python scripts/verify_profile.py",
       "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)",
-      "cmd": "python scripts/verify_profile.py"
+      "status": "pass"
     },
     "safe": {
-      "status": "fail",
-      "proved_on": "windows-26100.9168",
       "checks": [
         {
+          "hits": [],
           "status": "pass",
-          "name": "no_secrets",
-          "hits": []
+          "name": "no_secrets"
         },
         {
+          "hits": [],
           "status": "pass",
-          "name": "no_estate_paths",
-          "hits": []
+          "name": "no_estate_paths"
         },
         {
+          "hits": [],
           "status": "pass",
-          "name": "no_machine_names",
-          "hits": []
+          "name": "no_machine_names"
         },
         {
           "status": "pass",
@@ -42,8 +40,8 @@
           "detail": "NOTICE reserves all rights"
         },
         {
-          "dirty_files": 1,
-          "status": "fail",
+          "status": "pass",
+          "dirty_files": 0,
           "name": "tree_clean"
         },
         {
@@ -51,13 +49,15 @@
           "name": "verification_documented",
           "detail": "README carries a verification section and the CI badge"
         }
-      ]
+      ],
+      "status": "pass",
+      "proved_on": "windows-26100.9168"
     },
     "elsewhere": {
+      "sha": "41686c5b494c5cf4fe4038dca5eb3eb7d8ea9a84",
+      "reason": "no CI run recorded for 41686c5b494c5cf4fe4038dca5eb3eb7d8ea9a84",
       "status": "pending",
-      "proved_on": null,
-      "sha": "4d5cff4cb331f5519647f4352108162b23f2b357",
-      "reason": "no CI run recorded for 4d5cff4cb331f5519647f4352108162b23f2b357"
+      "proved_on": null
     }
   }
 }
