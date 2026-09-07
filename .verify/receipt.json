@@ -2,30 +2,39 @@
   "schema": "gatekeeper/0.1",
   "repo": "iridex-ai/iridex-ai",
   "visibility": "PUBLIC",
-  "head": "b48404b22727064a45b3f3a153dd6300d5041ef5",
-  "content_id": "466725ccc77c8bd532efd95b47d877c91b1236c62426ed9807a9e5c5d1f9708d",
-  "branch": "verify/scope",
-  "verified_at": "2026-09-07T16:09:51.0750302-04:00",
-  "box": "CRADLE",
+  "visibility_assumed": false,
+  "head": "4d5cff4cb331f5519647f4352108162b23f2b357",
+  "content_id": "89bc7e60a2892313e3014866d3eb1ba60c2dbd9debbae302a64a3f3eebc1c8b6",
+  "branch": "ci/dependabot-policy",
+  "verified_at": "2026-09-07T19:48:26.0222542-04:00",
+  "ran_on": "windows-26100.9168",
   "stages": {
     "works": {
+      "proved_on": "windows-26100.9168",
+      "timed_out": false,
       "status": "pass",
-      "cmd": "python scripts/verify_profile.py",
       "exit": 0,
-      "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)"
+      "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)",
+      "cmd": "python scripts/verify_profile.py"
     },
     "safe": {
-      "status": "pass",
+      "status": "fail",
+      "proved_on": "windows-26100.9168",
       "checks": [
         {
           "status": "pass",
-          "hits": [],
-          "name": "no_secrets"
+          "name": "no_secrets",
+          "hits": []
         },
         {
           "status": "pass",
-          "hits": [],
-          "name": "no_estate_paths"
+          "name": "no_estate_paths",
+          "hits": []
+        },
+        {
+          "status": "pass",
+          "name": "no_machine_names",
+          "hits": []
         },
         {
           "status": "pass",
@@ -33,8 +42,8 @@
           "detail": "NOTICE reserves all rights"
         },
         {
-          "dirty_files": 0,
-          "status": "pass",
+          "dirty_files": 1,
+          "status": "fail",
           "name": "tree_clean"
         },
         {
@@ -45,14 +54,10 @@
       ]
     },
     "elsewhere": {
-      "runs": [
-        {
-          "workflow": "verify",
-          "url": "https://github.com/iridex-ai/iridex-ai/actions/runs/34158234703",
-          "conclusion": "success"
-        }
-      ],
-      "status": "pass"
+      "status": "pending",
+      "proved_on": null,
+      "sha": "4d5cff4cb331f5519647f4352108162b23f2b357",
+      "reason": "no CI run recorded for 4d5cff4cb331f5519647f4352108162b23f2b357"
     }
   }
 }
