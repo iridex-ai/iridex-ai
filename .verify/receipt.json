@@ -1,0 +1,53 @@
+{
+  "schema": "gatekeeper/0.1",
+  "repo": "iridex-ai/iridex-ai",
+  "visibility": "PUBLIC",
+  "head": "3ae9233a8a3e42c2c4c7d6fb12c4f27dcd4e9472",
+  "content_id": "466725ccc77c8bd532efd95b47d877c91b1236c62426ed9807a9e5c5d1f9708d",
+  "branch": "verify/scope",
+  "verified_at": "2026-09-07T16:07:50.6692042-04:00",
+  "box": "CRADLE",
+  "stages": {
+    "works": {
+      "status": "pass",
+      "cmd": "python scripts/verify_profile.py",
+      "exit": 0,
+      "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)"
+    },
+    "safe": {
+      "status": "pass",
+      "checks": [
+        {
+          "name": "no_secrets",
+          "status": "pass",
+          "hits": []
+        },
+        {
+          "name": "no_estate_paths",
+          "status": "pass",
+          "hits": []
+        },
+        {
+          "name": "licence_declared",
+          "detail": "NOTICE reserves all rights",
+          "status": "pass"
+        },
+        {
+          "name": "tree_clean",
+          "dirty_files": 0,
+          "status": "pass"
+        },
+        {
+          "name": "verification_documented",
+          "detail": "README carries a verification section and the CI badge",
+          "status": "pass"
+        }
+      ]
+    },
+    "elsewhere": {
+      "sha": "3ae9233a8a3e42c2c4c7d6fb12c4f27dcd4e9472",
+      "status": "pending",
+      "reason": "no CI run recorded for 3ae9233a8a3e42c2c4c7d6fb12c4f27dcd4e9472"
+    }
+  }
+}
