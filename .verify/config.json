@@ -1,0 +1,4 @@
+{
+  "_comment": "Verification scope for the iridex profile repo. No application, so 'works' proves the page is intact and every brand-asset CDN URL it embeds actually resolves - a broken asset would otherwise render as a broken image on a public identity page with nothing in the repo to reveal it. CI also runs weekly on a schedule for that reason: the failure originates outside this repo, so a push-only trigger would never catch it. See B:/runners/verify.ps1 and canon disclosure_and_verification.md 2.3.",
+  "works": "python scripts/verify_profile.py"
+}

@@ -1,0 +1,37 @@
+name: verify
+
+# Proves the public identity page is intact and its asset dependencies resolve, from a
+# machine that is not the author's. Standard library only - no install step.
+#
+# A green run here is what lets a push reach the default branch - see .verify/config.json.
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # The asset-CDN check is the reason for a schedule: a broken image on a public profile
+    # is caused by something OUTSIDE this repo, so nothing here would ever push and find out.
+    - cron: '17 6 * * 1'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Page is intact and its asset URLs resolve
+        run: python scripts/verify_profile.py
+
+      - name: No committed secrets
+        shell: bash
+        run: |
+          pat='(BEGIN [A-Z ]*PRIVATE KEY|gh[pousr]_[A-Za-z0-9]{16,}|AKIA[0-9A-Z]{16})'  # verify:allow-pattern
+          hits=$(git grep -nIE "$pat" -- $(git ls-files) | grep -v 'verify:allow-pattern' || true)
+          if [ -n "$hits" ]; then echo "$hits"; echo 'credential-shaped content in tracked files'; exit 1; fi
+          echo clean

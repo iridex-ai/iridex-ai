@@ -13,6 +13,24 @@ deliver the highest quality possible.
 — reproducible document-release forensics: hash-anchored sources, CI re-derivation, tiered
 claims, and a standing invitation to break it.
 
+### Verification
+
+[![verify](https://github.com/iridex-ai/iridex-ai/actions/workflows/verify.yml/badge.svg)](https://github.com/iridex-ai/iridex-ai/actions/workflows/verify.yml)
+
+Every repository under this account and the parent organisation is verified before a push
+lands, in three stages: it **works**, it is **safe**, and it works **elsewhere** — on a clean
+runner rather than only on the author's machine. Nothing reaches a default branch without a
+green result for that exact tree, and each repo carries a `.verify/receipt.json` recording
+what was checked and where.
+
+This page is no exception. Its check fetches every brand-asset URL the page embeds, and runs
+weekly on a schedule as well as on push — a broken image here would be caused by something
+outside this repo, so a push-only trigger would never find it.
+
+```bash
+python scripts/verify_profile.py
+```
+
 ### Elsewhere
 
 [Hugging Face](https://huggingface.co/iridex-ai) · [Kaggle](https://kaggle.com/iridexai) ·
