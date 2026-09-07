@@ -35,3 +35,5 @@ jobs:
           hits=$(git grep -nIE "$pat" -- $(git ls-files) | grep -v 'verify:allow-pattern' || true)
           if [ -n "$hits" ]; then echo "$hits"; echo 'credential-shaped content in tracked files'; exit 1; fi
           echo clean
+          # git grep exits 1 when it finds nothing; end the step deterministically
+          exit 0
