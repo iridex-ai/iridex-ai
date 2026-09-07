@@ -3,21 +3,22 @@
   "repo": "iridex-ai/iridex-ai",
   "visibility": "PUBLIC",
   "visibility_assumed": false,
-  "head": "41686c5b494c5cf4fe4038dca5eb3eb7d8ea9a84",
+  "head": "2b8b7868f4d2f9121d84045f0e897b5df1a5cb02",
   "content_id": "212502d38a861c33968c4850512a980a16be0cbc1fc09876840691a8a4e4f080",
   "branch": "ci/dependabot-policy",
-  "verified_at": "2026-09-07T19:50:38.8962024-04:00",
+  "verified_at": "2026-09-07T19:52:55.9299144-04:00",
   "ran_on": "windows-26100.9168",
   "stages": {
     "works": {
       "timed_out": false,
-      "exit": 0,
+      "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)",
+      "status": "pass",
       "proved_on": "windows-26100.9168",
       "cmd": "python scripts/verify_profile.py",
-      "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)",
-      "status": "pass"
+      "exit": 0
     },
     "safe": {
+      "status": "pass",
       "checks": [
         {
           "hits": [],
@@ -35,29 +36,33 @@
           "name": "no_machine_names"
         },
         {
+          "detail": "NOTICE reserves all rights",
           "status": "pass",
-          "name": "licence_declared",
-          "detail": "NOTICE reserves all rights"
+          "name": "licence_declared"
         },
         {
-          "status": "pass",
           "dirty_files": 0,
+          "status": "pass",
           "name": "tree_clean"
         },
         {
+          "detail": "README carries a verification section and the CI badge",
           "status": "pass",
-          "name": "verification_documented",
-          "detail": "README carries a verification section and the CI badge"
+          "name": "verification_documented"
         }
       ],
-      "status": "pass",
       "proved_on": "windows-26100.9168"
     },
     "elsewhere": {
-      "sha": "41686c5b494c5cf4fe4038dca5eb3eb7d8ea9a84",
-      "reason": "no CI run recorded for 41686c5b494c5cf4fe4038dca5eb3eb7d8ea9a84",
-      "status": "pending",
-      "proved_on": null
+      "status": "pass",
+      "runs": [
+        {
+          "conclusion": "success",
+          "url": "https://github.com/iridex-ai/iridex-ai/actions/runs/34171394422",
+          "workflow": "verify"
+        }
+      ],
+      "proved_on": "github-actions"
     }
   }
 }
