@@ -1,0 +1,23 @@
+# Dependency policy for iridex-ai.
+#
+# Public identity page. Its checker fetches the brand-asset URLs the page embeds and
+# runs weekly, because that failure originates outside this repository. No packages.
+
+version: 2
+
+updates:
+  # The workflow is this repository's only dependency, and it is a real one: an action runs
+  # with access to the repository, so an abandoned or compromised version matters. It is also
+  # the clean-runner evidence the verification story relies on, so it stays current.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "build(ci)"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
