@@ -3,74 +3,66 @@
   "repo": "iridex-ai/iridex-ai",
   "visibility": "PUBLIC",
   "visibility_assumed": false,
-  "head": "b8559272eb1b338e7675157c21991ea01ba41ee1",
-  "content_id": "275f0eba05105b705464ae962a1c777b8d58de80fd7395865c6beacf314dfea9",
+  "head": "a0f8cca10c0324e5439c41cd83145a0a8c620014",
+  "content_id": "d43a48a24597b1036d8e57b9cb003b7822cef372420fede0538fe618c919c03a",
   "branch": "main",
-  "verified_at": "2026-09-08T02:12:23.8070517-04:00",
+  "verified_at": "2026-09-08T16:51:45.0503544-04:00",
   "ran_on": "windows-26100.9168",
   "stages": {
     "works": {
+      "timed_out": false,
+      "proved_on": "windows-26100.9168",
       "cmd": "python scripts/verify_profile.py",
       "exit": 0,
-      "proved_on": "windows-26100.9168",
       "status": "pass",
-      "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)",
-      "timed_out": false
+      "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)"
     },
     "safe": {
       "proved_on": "windows-26100.9168",
+      "status": "pass",
       "checks": [
         {
-          "status": "pass",
           "name": "no_secrets",
+          "status": "pass",
           "hits": []
         },
         {
-          "status": "pass",
           "name": "no_estate_paths",
+          "status": "pass",
           "hits": []
         },
         {
-          "status": "pass",
           "name": "no_machine_names",
+          "status": "pass",
           "hits": []
         },
         {
-          "detail": "NOTICE reserves all rights",
+          "name": "licence_declared",
           "status": "pass",
-          "name": "licence_declared"
+          "detail": "NOTICE reserves all rights"
         },
         {
+          "name": "tree_clean",
           "status": "pass",
-          "dirty_files": 0,
-          "name": "tree_clean"
+          "dirty_files": 0
         },
         {
-          "detail": "README carries a verification section and the CI badge",
+          "name": "verification_documented",
           "status": "pass",
-          "name": "verification_documented"
+          "detail": "README carries a verification section and the CI badge"
         }
-      ],
-      "status": "pass"
+      ]
+    },
+    "memory": {
+      "proved_on": null,
+      "status": "n/a",
+      "reason": "a user profile README validated by scripts/verify_profile.py. The verification here is a one-shot script that runs and exits, so there is no resident process for a leak to accumulate in. Re-declare this the moment anything here becomes long-running."
     },
     "elsewhere": {
-      "proved_on": "github-actions",
-      "runs": [
-        {
-          "url": "https://github.com/iridex-ai/iridex-ai/actions/runs/34184464182",
-          "conclusion": "success",
-          "workflow": "verify",
-          "status": "completed"
-        },
-        {
-          "url": "https://github.com/iridex-ai/iridex-ai/actions/runs/34184324255",
-          "conclusion": "success",
-          "workflow": "verify",
-          "status": "completed"
-        }
-      ],
-      "workflow": "verify",
-      "status": "pass"
+      "proved_on": null,
+      "status": "pending",
+      "reason": "no CI run recorded for a0f8cca10c0324e5439c41cd83145a0a8c620014",
+      "sha": "a0f8cca10c0324e5439c41cd83145a0a8c620014"
     }
   }
 }
