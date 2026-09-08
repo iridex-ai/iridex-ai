@@ -3,37 +3,37 @@
   "repo": "iridex-ai/iridex-ai",
   "visibility": "PUBLIC",
   "visibility_assumed": false,
-  "head": "2b8b7868f4d2f9121d84045f0e897b5df1a5cb02",
-  "content_id": "212502d38a861c33968c4850512a980a16be0cbc1fc09876840691a8a4e4f080",
-  "branch": "ci/dependabot-policy",
-  "verified_at": "2026-09-07T19:52:55.9299144-04:00",
+  "head": "b8559272eb1b338e7675157c21991ea01ba41ee1",
+  "content_id": "275f0eba05105b705464ae962a1c777b8d58de80fd7395865c6beacf314dfea9",
+  "branch": "main",
+  "verified_at": "2026-09-08T02:12:23.8070517-04:00",
   "ran_on": "windows-26100.9168",
   "stages": {
     "works": {
-      "timed_out": false,
-      "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)",
-      "status": "pass",
-      "proved_on": "windows-26100.9168",
       "cmd": "python scripts/verify_profile.py",
-      "exit": 0
+      "exit": 0,
+      "proved_on": "windows-26100.9168",
+      "status": "pass",
+      "evidence": "ok  https://assets.carpedieminnovationsinc.com/sig/iridex.png\nchecked: 1 asset URL(s)",
+      "timed_out": false
     },
     "safe": {
-      "status": "pass",
+      "proved_on": "windows-26100.9168",
       "checks": [
         {
-          "hits": [],
           "status": "pass",
-          "name": "no_secrets"
+          "name": "no_secrets",
+          "hits": []
         },
         {
-          "hits": [],
           "status": "pass",
-          "name": "no_estate_paths"
+          "name": "no_estate_paths",
+          "hits": []
         },
         {
-          "hits": [],
           "status": "pass",
-          "name": "no_machine_names"
+          "name": "no_machine_names",
+          "hits": []
         },
         {
           "detail": "NOTICE reserves all rights",
@@ -41,8 +41,8 @@
           "name": "licence_declared"
         },
         {
-          "dirty_files": 0,
           "status": "pass",
+          "dirty_files": 0,
           "name": "tree_clean"
         },
         {
@@ -51,18 +51,26 @@
           "name": "verification_documented"
         }
       ],
-      "proved_on": "windows-26100.9168"
+      "status": "pass"
     },
     "elsewhere": {
-      "status": "pass",
+      "proved_on": "github-actions",
       "runs": [
         {
+          "url": "https://github.com/iridex-ai/iridex-ai/actions/runs/34184464182",
           "conclusion": "success",
-          "url": "https://github.com/iridex-ai/iridex-ai/actions/runs/34171394422",
-          "workflow": "verify"
+          "workflow": "verify",
+          "status": "completed"
+        },
+        {
+          "url": "https://github.com/iridex-ai/iridex-ai/actions/runs/34184324255",
+          "conclusion": "success",
+          "workflow": "verify",
+          "status": "completed"
         }
       ],
-      "proved_on": "github-actions"
+      "workflow": "verify",
+      "status": "pass"
     }
   }
 }
